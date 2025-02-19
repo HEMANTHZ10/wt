@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        /* Overall layout */
+        .book-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Book card styling */
+        .book {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .book:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .book img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+        }
+
+        .book h3 {
+            font-size: 1.6em;
+            margin-top: 15px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .book p {
+            font-size: 1em;
+            color: #666;
+            margin: 15px 0;
+            line-height: 1.5;
+        }
+
+        .book button {
+            background-color: #748375;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        .book button:hover {
+            background-color: #90b5e6;
+        }
+
+        /* Grid responsiveness */
+        @media (max-width: 768px) {
+            .book-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .book-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Styling for the footer (could be added for better user experience) */
+        footer {
+            background-color: #748375;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Enhanced list styling (for an added section) */
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        ul li {
+            font-size: 1.1em;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        /* Add a border to the book descriptions */
+        .book p {
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="book-container">
+        <!-- Book 1 -->
+        <div class="book">
+            <img src="https://images.pexels.com/photos/1643033/pexels-photo-1643033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Book 1">
+            <h3>Title 1</h3>
+            <p>A brief description of the book. It's an exciting story about adventure and discovery.</p>
+            <button>Buy Now</button>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="book">
+            <img src="https://images.pexels.com/photos/1643033/pexels-photo-1643033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Book 2">
+            <h3>Title 2</h3>
+            <p>This is a gripping mystery novel with lots of twists and turns. A must-read for thriller lovers.</p>
+            <button>Buy Now</button>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="book">
+            <img src="https://images.pexels.com/photos/1643033/pexels-photo-1643033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Book 3">
+            <h3>Title 3</h3>
+            <p>A deep dive into the world of science fiction, filled with futuristic technology and space exploration.</p>
+            <button>Buy Now</button>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="book">
+            <img src="https://images.pexels.com/photos/1643033/pexels-photo-1643033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Book 4">
+            <h3>Title 4</h3>
+            <p>This book explores the depths of history and culture, providing valuable insights into the past.</p>
+            <button>Buy Now</button>
+        </div>
+
+        <!-- Book 5 -->
+        <div class="book">
+            <img src="https://images.pexels.com/photos/1643033/pexels-photo-1643033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Book 5">
+            <h3>Title 5</h3>
+            <p>An inspirational self-help book that motivates you to achieve your dreams and overcome obstacles.</p>
+            <button>Buy Now</button>
+        </div>
+    </div>
+
+</body>
+</html>

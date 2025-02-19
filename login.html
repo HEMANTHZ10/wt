@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login Page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form" onsubmit="return validateForm()">
+            <h2>Login</h2>
+            <input type="text" id="username" name="username" placeholder="Username">
+            <p class="error" id="username-error">Username is required</p>
+
+            <input type="password" id="password" name="password" placeholder="Password">
+            <p class="error" id="password-error">Password must be at least 6 characters</p>
+
+            <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+            <p class="error" id="captcha-error">Please complete the CAPTCHA</p>
+
+            <input type="submit" value="Login">
+            <p><a href="#" class="forgot-password">Forgot Password?</a></p>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+            
+            let username = document.getElementById("username").value.trim();
+            let usernameError = document.getElementById("username-error");
+            if (username === "") {
+                usernameError.style.display = "block";
+                isValid = false;
+            } else {
+                usernameError.style.display = "none";
+            }
+
+            let password = document.getElementById("password").value;
+            let passwordError = document.getElementById("password-error");
+            if (password.length < 6) {
+                passwordError.style.display = "block";
+                isValid = false;
+            } else {
+                passwordError.style.display = "none";
+            }
+
+            let captchaResponse = grecaptcha.getResponse();
+            let captchaError = document.getElementById("captcha-error");
+            if (captchaResponse.length === 0) {
+                captchaError.style.display = "block";
+                isValid = false;
+            } else {
+                captchaError.style.display = "none";
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>

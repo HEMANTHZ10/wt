@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <style>
+        /* Overall body styling */
+        body {
+            background-color: rgb(185, 204, 219);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Header section */
+        h3 {
+            color: black;
+            font-size: 28px;
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Logo and navigation container */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        /* Navigation container */
+        .nav {
+            display: flex;
+            gap: 30px;
+            padding: 10px;
+            background-color: #3e4c59;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation links */
+        a {
+            font-size: 18px;
+            text-decoration: none;
+            color: #e2dbdb;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover effect for navigation links */
+        a:hover {
+            color: #90b5e6;
+        }
+
+        /* Styling for the logo image */
+        img {
+            border-radius: 50%;
+            border: 3px solid #3e4c59;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover effect for the logo image */
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Small screen responsiveness */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            img {
+                width: 50px;
+                height: 50px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header container with logo and nav links -->
+    <div class="header-container">
+        <!-- Logo -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTLXGKLvx3pBXuQZfcqwcpML8DKvnTILSxKw&s" alt="Logo" width="65px" height="65px">
+        
+        <!-- Bookstore Title -->
+        <h3>VNR BOOKSTORE</h3>
+
+        <!-- Navigation Bar -->
+        <div class="nav">
+            <a href="books.html" target="content">Home</a>
+            <a href="signup.html" target="content">Signup</a>
+            <a href="login.html" target="content">Login</a>
+        </div>
+    </div>
+
+</body>
+</html>
